@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: calibri;
+    text-decoration: none;
+    border: none;
+    color: #000000;
+}
+
+:root {
+  --color-principal: #3498db;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-rows: 0.2fr 9.8fr;
+}
+/*___________________________________ CABECERA*/
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-principal);
+}
+
+#menu_amburguesa {
+    background: none;
+    font-size: 50px;
+    padding: 30px;
+}
+
+#titulo {
+    color: #FFFFFF;
+    font-size: 50px;
+    padding-right: 50px;
+}
+/*___________________________________ CABECERA*/
+#contenedor_menu_desplegable {
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    background-color: rgba(0,0,0,.2);
+}
+#menu_desplegable {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    padding: 70px;
+    gap: 30px;    
+}
+.seccion {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #0B0B0B;
+    gap: 2px;
+}
+.titulo {
+    font-size: 30px;
+}
+#menu_desplegable a {
+    font-size: 40px;
+}
+/*___________________________________ CABECERA*/
+#webView {
+    width: 100%;
+    height: 100%;
+}
