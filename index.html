@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VlasisT</title>
+    <script>
+        function detectarDispositivo() {
+            let esMovil = /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent) || window.innerWidth <= 768;
+            let archivoPrincipal = esMovil ? "movil.html" : "desktop.html";
+            let archivoAlternativo = "ruta/default.html";
+
+            fetch(archivoPrincipal, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.assign(archivoPrincipal);
+                    } else {
+                        window.location.assign(archivoAlternativo);
+                    }
+                })
+                .catch(error => {
+                    window.location.assign(archivoAlternativo);
+                });
+        }
+        detectarDispositivo();
+    </script>
+</head>
+<body>
+</body>
+</html>
