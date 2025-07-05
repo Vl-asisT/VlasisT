@@ -12,13 +12,13 @@
             fetch(archivoPrincipal, { method: 'HEAD' })
                 .then(response => {
                     if (response.ok) {
-                        window.location.assign(`rutas/${archivoPrincipal}`);
+                        window.location.assign(`rutass/${archivoPrincipal}`);
                     } else {
-                        window.location.assign(`rutas/${archivoAlternativo}`);
+                        window.location.assign(`rutass/${archivoAlternativo}`);
                     }
                 })
                 .catch(error => {
-                    window.location.assign(`rutas/${archivoAlternativo}`);
+                    window.location.assign(`rutass/${archivoAlternativo}`);
                 });
         }
         detectarDispositivo();
